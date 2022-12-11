@@ -20,6 +20,7 @@
     --color-border: #eeeeee;
     --color-border-header: #ececec;
     --color-fill-icons: #AFB1B8;
+    --color-shadow:rgba(0, 0, 0, 0.25);
 }
 
 
@@ -81,7 +82,7 @@ body{
 .header-container{
     display: flex;
     align-items: center;
-    gap:345px;
+    /* gap:345px; */
 }
 .nav-header{
     display: flex;
@@ -89,6 +90,7 @@ body{
     gap: 95px;
 }
 .header-contact-container{
+    margin-left: auto;
     display: flex;
     gap: 20px;
     justify-content: space-between;
@@ -127,7 +129,8 @@ body{
     text-decoration: none;
 }
 
-.nav-item:hover a{
+.nav-item:hover a,
+.nav-item:focus a{
     color: var(--text-color-buttonlink);
 }
 
@@ -149,9 +152,12 @@ body{
     fill: var(--text-color-buttonlink);
 }
 .header-phone{
-    width: 200px;
+
     display: flex;
+    flex-grow: 100;
     gap: 10px;
+    margin: 0;
+    padding: 0;
     align-content: center;
     text-decoration: none;
     color: var(--text-color);
@@ -276,6 +282,7 @@ body{
 .team-item{
     display: flex;
     flex-direction: column;
+    box-shadow: 0px 4px 4px var(--color-shadow);
 }
 .team-head{
     margin: 0 0 50px;
@@ -341,7 +348,10 @@ body{
 .head-clients{
     display: block;  
     text-align: center;
-    margin: 0 0 50px;
+    margin: 94px 0 50px;
+    font-size: 36px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
 }
 .list-clients{
     list-style: none;
@@ -398,6 +408,7 @@ body{
     letter-spacing: 0.03em;    
 }
 .footer .logo{
+    margin: 0 0 20px;
     color: var(--text-color-active);
 }
 .footer-container{
@@ -418,6 +429,7 @@ body{
     list-style: none;
 }
 .footer-social-list .social-link{
+    fill: var(--text-color-active);
     background-color: var(--backgrount-footer-item);
 }
 .social-link-item:hover .social-link {
@@ -463,8 +475,16 @@ body{
     line-height: 26px;
     font-size: 16px;
     text-align: center;
-    letter-spacing: 0.03em;    
+    letter-spacing: 0.03em;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;   
 }
+.list-buttons-item:hover>.button,
+.list-buttons-item:focus>.button{
+    color: var(--text-color-active);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
 .gallery-item a{   
     text-decoration: none;
 }
@@ -474,6 +494,11 @@ body{
     list-style: none;
     border: 1px solid var(--color-border);
 }
+.gallery-item:focus,
+.gallery-item:hover{
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .gallery-head{  
     margin: 0;
     color: var(--primary-text-color);
