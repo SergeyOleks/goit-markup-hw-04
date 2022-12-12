@@ -428,6 +428,7 @@ body{
     color: var(--text-color-active);
 }
 .footer-container{
+    padding: 0 215px;
     display: flex;
     flex-direction: row;
     gap: 70px;  
