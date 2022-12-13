@@ -30,6 +30,7 @@ body{
     border: none;
     font-family: 'Roboto', sans-serif;
     list-style: none;
+    max-width: 1600px;
 }
 
 
@@ -67,7 +68,7 @@ body{
 }
 /* Центрующий контейнер */
 .container{
-    width: 1600px;  
+    width: 1200px;  
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -250,6 +251,7 @@ body{
     margin: 0 0 30px;
     background-color: var(--background-button);
     height: 120px;
+    border-radius: 4px;
 }
 
 /* секция чем мы занимаемся*/
@@ -277,8 +279,7 @@ body{
 /*секция наша команда */
 .team{    
     padding: 95px 0;
-}
-.team >.container{
+
     margin: 0 auto;
     background-color: var(--background-button);
 }
@@ -428,7 +429,7 @@ body{
     color: var(--text-color-active);
 }
 .footer-container{
-    padding: 0 215px;
+    /* padding: 0 215px; */
     display: flex;
     flex-direction: row;
     gap: 70px;  
@@ -452,12 +453,12 @@ body{
 
 .footer-social-link{
     width: 44px;
-        height: 44px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        fill: var(--color-fill-icons);
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    fill: var(--text-color-active);
     background-color: var(--backgrount-footer-item);
 
 }
@@ -488,6 +489,7 @@ body{
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
+    padding: 0;
 
 }
 .list-buttons{
